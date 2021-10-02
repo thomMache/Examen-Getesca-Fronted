@@ -1,0 +1,35 @@
+<button type="button" (onChange)="setEquipoOrUsuario()" class="btn btn-primary my-3">
+    {{EquipoOrUsuario==true? 'Equipo OR Usuario':'mostrar'}}</button>
+ <!-- <div class="card">
+   <div class="card-header">
+        Ventas por Equipo
+    </div> 
+    <ul class="list-group" *ngIf="EquipoOrUsuario">
+        <li class="list-group-item" *ngFor="let equipos of ventas">{{equipos}}</li>
+    </ul>
+</div>-->
+
+
+
+<div class="card border-primary mb-3">
+    <div class="card-body text-primary">
+      <h5 class="card-title">Ventas Usuario</h5>
+  
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Nombre Usuario</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of usuarios">
+            <td>{{ usuario.nombreUsuario }}</td>
+            <td>{{ usuario.total }}</td>
+     
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+  </div>
